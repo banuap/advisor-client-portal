@@ -1,4 +1,7 @@
 class Client < ApplicationRecord
+  has_many :financial_goals, dependent: :restrict_with_error
+  has_many :service_requests, dependent: :restrict_with_error
+
   RISK_PROFILES = %w[conservative moderate growth].freeze
 
   validates :external_reference, presence: true, uniqueness: true
