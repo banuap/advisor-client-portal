@@ -25,6 +25,10 @@ curl -X POST http://localhost:3000/api/v1/clients \
 Run tests with `bin/rails test` (or `ruby bin/rails test` if the script is
 not executable in your checkout).
 
+The GitHub Actions **CodeQL** workflow scans Ruby on pushes to `main`, pull
+requests targeting `main`, manual dispatch, and weekly. Review findings under
+**Security → Code scanning** in GitHub.
+
 The local default is SQLite; production expects PostgreSQL through
 `DATABASE_URL`. This starter has no authentication, authorization, real KYC
 integration, document storage, or client-data protection controls. Use only
